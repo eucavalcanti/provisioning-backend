@@ -1,1 +1,19 @@
-
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: provisioning-backend
+  description: API FastAPI que orquestra provisionamento via Terraform
+  annotations:
+    github.com/project-slug: org/provisioning-backend
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - python
+    - fastapi
+    - terraform
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/platform-team
+  system: idp-lab
+  providesApis:
+    - provisioning-api
